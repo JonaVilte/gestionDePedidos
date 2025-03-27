@@ -8,14 +8,14 @@ from app import app
 def read_root():
     return {"status": "Ok"}
 
-@app.get("/api/v1/clientes")
+@app.post("/api/v1/clientes")
 def post_clientes(cliente: Clientes):
     return registrarNuevoCliente(cliente)
 
-@app.get("/api/v1/productos")
+@app.post("/api/v1/productos")
 def post_productos(porducto: Productos):
     return registrarNuevoProducto(porducto)
 
-@app.get("/api/v1/pedidos")
+@app.post("/api/v1/pedidos")
 def post_pedidos(pedido: PedidoARegistrar):
     return registrarNuevoPedido(pedido)

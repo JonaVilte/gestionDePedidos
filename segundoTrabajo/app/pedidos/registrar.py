@@ -5,7 +5,7 @@ from db.modelos import Pedidos, ProductosEnPedidos
 
 class Productos(BaseModel):
     productoID: str
-    cantidad: str
+    cantidad: int
 
 class PedidoARegistrar(BaseModel):
     clienteID: str
